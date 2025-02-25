@@ -1,6 +1,8 @@
 <?php
-  ob_start(); // Start output buffering
-  
+
+  // Start output buffering
+  ob_start();
+
   // Assign file paths to PHP constants
   // __FILE__ returns the current path to this file
   // dirname() returns the path to the parent directory
@@ -23,4 +25,10 @@
   
   require_once('functions.php');
 
+
+  // Example records array
+$records = [
+  ['id' => 1, 'name' => 'John Doe', 'email' => 'john@example.com'],
+  ['id' => 2, 'name' => 'Jane Smith', 'email' => 'jane@example.com']
+];
 ?>
