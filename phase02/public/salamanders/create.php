@@ -13,7 +13,7 @@ $salamanders = [
 $salamanderName = '';
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
   $salamanderName = $_POST['salamanderName'] ?? '';
-  // Add the new salamander to the array (in a real application, you would insert into the database)
+  // Add the new salamander to the array 
   $new_id = count($salamanders) + 1;
   $salamanders[] = ['id' => $new_id, 'salamanderName' => $salamanderName];
 }

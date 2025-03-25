@@ -16,9 +16,9 @@ $pageTitle = 'Salamanders';
 include(SHARED_PATH . '/salamander-header.php'); 
 ?>
 
-<h1>Salamanders</h1>
+<h1>Salamanders Main Page</h1>
 
-<a href="<?php echo urlFor('/salamanders/new.php'); ?>">Create Salamander</a>
+<a href="<?php echo urlFor('/salamanders/new.php'); ?>">Create a Salamander</a>
 
 <table>
   <tr>
