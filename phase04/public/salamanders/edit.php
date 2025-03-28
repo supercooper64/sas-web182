@@ -2,26 +2,20 @@
 
 require_once('../../private/initialize.php');
 include(SHARED_PATH . '/salamander-header.php');
-
+echo "<h1> Edit Salamander</h1>";
 $id = $_GET['id'];
-echo "<h1>Stub for Edit Salamander</h1>";
 
-include(SHARED_PATH . '/salamander-footer.php');
-
-if (is_post_request()) {
-
+if(is_post_request()) { 
   // Handle form values sent by new.php
   $salamander = [];
-  $salamander['id'] = $_POST['id'] ?? '';
+  $salamander['id'] = $id;
   $salamander['name'] = $_POST['name'] ?? '';
   $salamander['habitat'] = $_POST['habitat'] ?? '';
   $salamander['description'] = $_POST['description'] ?? '';
-
-  insert_salamander($salamander);
-
-  $newID = mysqli_insert_id($sb);
-  redirect_to(url_for('salamanders/show.php' . $newID));
-} else {
+  update_salamander($salamander);
+  redirect_to(url_for('salamanders/show.php?id=' . $id));
+} 
+else {
   $salamander = find_salamander_by_id($id);
 }
 ?>
@@ -48,3 +42,5 @@ if (is_post_request()) {
   </label>
 
 </form>
+
+<?php include(SHARED_PATH . '/salamander-footer.php');?>
