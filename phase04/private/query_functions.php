@@ -10,12 +10,14 @@ function find_all_salamanders() {
 }
 
 function find_salamander_by_id($id) {
-  global $db;
-  $sql = "SELECT * FROM salamander ";
-  $sql .= "WHERE id='" . $id . "'";
-  $result = mysqli_query($db, $sql);
-  confirm_result_set($result, $sql);
-  return $result;
+    global $db;
+    $sql = "SELECT * FROM salamander ";
+    $sql .= "WHERE id='$id'";
+    $result = mysqli_query($db, $sql);
+    confirm_result_set($result, $sql);
+    $salamander = mysqli_fetch_assoc($result);
+    mysqli_free_result($result);
+    return $salamander;
 }
 
 function insert_salamander($salamander) {
@@ -60,24 +62,24 @@ function update_salamander($salamander) {
     // UPDATE failed
     echo mysqli_error($db);
     db_disconnect($db);
-    exit;
+    exit();
   }
 }
 
 function delete_salamander($id) {
   global $db;
-  $sql = "DELETE FROM salamander";
+  $sql = "DELETE FROM salamander "; // Ensure the table name is correct
   $sql .= "WHERE id='" . $id . "' ";
   $sql .= "LIMIT 1";
   $result = mysqli_query($db, $sql);
 
   // For DELETE statements, $result is true/false
   if($result) {
-    return true;
+      return true;
   } else {
-    // DELETE failed
-    echo mysqli_error($db);
-    db_disconnect($db);
-    exit;
+
+      echo mysqli_error($db);
+      db_disconnect($db);
+      exit;
   }
 }
