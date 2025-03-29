@@ -6,7 +6,6 @@ include(SHARED_PATH . '/salamander-header.php');
 $salamander = find_salamander_by_id($id);
 ?>
 
-
   <a href="<?= url_for('/salamanders/index.php'); ?>">&laquo; Back to List</a>
 
    <p> Page ID: <?= h($id); ?> </p>
