@@ -1,8 +1,7 @@
 <?php require_once('../../private/initialize.php'); 
 include(SHARED_PATH . '/salamander-header.php');
-echo "<h1>Stub for New Salamander</h1>";
-
-include(SHARED_PATH . '/salamander-footer.php'); ?>
+echo "<h1>Create New Salamander</h1>";
+ ?>
 
 <form action="<?= url_for('/salamanders/create.php'); ?>" method="post">
   <p>Name:<br> <input type="text" name="name" value=""></p>
@@ -21,3 +20,5 @@ include(SHARED_PATH . '/salamander-footer.php'); ?>
     <p><input type="submit" value="Create Salamander"></p>
     </label>
 </form>
+
+<?php include(SHARED_PATH . '/salamander-footer.php'); ?>
