@@ -13,7 +13,6 @@ if(!isset($_GET['id'])) {
   
   } else {
     $salamander = find_salamander_by_id($id);
-
   }
   
   $pageTitle = 'Delete Salamander'; ?>
