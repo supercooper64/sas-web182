@@ -4,8 +4,7 @@ require_once('../../private/initialize.php');
 include(SHARED_PATH . '/salamander-header.php'); 
 $pageTitle = 'Edit Salamander';
 $id = $_GET['id'];
-// need to remove this line but right now it works.
-$salamander = find_salamander_by_id($id);
+
 if(is_post_request()) {
     $salamander = [];
     $salamander['id'] = $id;
