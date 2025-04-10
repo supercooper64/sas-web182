@@ -1,4 +1,3 @@
-
 # Southern Appalachian Salamanders
 ## PHP/MySQL Project
 This is a basic PHP project that connects to a MySQL database using credentials stored in a non-tracked secure file.
