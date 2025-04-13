@@ -1,0 +1,133 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 980px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+  height: 40px;
+  margin: 0 0 10px 0;
+  background: #FFF;
+  color: #000;
+}
+
+header h1 {
+  margin: 0;
+  padding: 5px;
+  text-align: left;
+}
+
+navigation {
+  width: 980px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+navigation ul {
+  color: #000;
+}
+
+navigation ul li {
+  margin-right: 1em;
+}
+
+#content {
+  width: 920px;
+  min-height: 500px;
+}
+
+footer {
+  height: 20px;
+  margin: 0;
+  background: #FFF;
+  color: #000;
+}
+
+/* Actions */
+
+.actions {
+  margin-bottom: 1em;
+}
+
+
+/* Lists */
+
+table {
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+table.list {
+  width: 100%;
+}
+
+table.list tr td {
+  border: 1px solid #999999;
+}
+
+table.list tr th {
+  border: 1px solid #680281;;
+  background: #680281;;
+  color: white;
+  text-align: left;
+}
+
+/* Forms */
+
+dl {
+  clear: both;
+  overflow: hidden;
+  margin: 0.5em 0;
+}
+
+dt {
+  float: left;
+  font-weight: bold;
+  width: 125px;
+}
+
+dd {
+  float: left;
+  margin-left: 1em;
+}
+
+#operations {
+  clear: both;
+  margin: 1em 0 1em 75px;
+}
+
+/* Errors */
+
+.errors {
+  display: inline-block;
+  border: 2px solid red;
+  color: red;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.errors ul {
+  margin-bottom: 0;
+  padding-left: 1em;
+}
+
+.salamander-table {
+  border-style: ridge;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 41px;
+}
+
+.salamander-table th, td {
+  border-style: ridge;
+}
+
+
